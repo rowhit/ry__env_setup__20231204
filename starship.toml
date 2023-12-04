@@ -1,0 +1,189 @@
+# file: ~/.config/starship.toml
+# starship version: 1.14.2
+################################################################################
+# prompt
+#*******************************************************************************
+add_newline = false
+# format = """$username$hostname$os$localip$time$memory_usage$jobs$custom$env_var$kubernetes$conda$python$haskell$julia$line_break$directory$git_branch$git_commit$git_state$line_break$shell$character"""
+format = """$username$hostname$os$localip$time$memory_usage$jobs$custom$kubernetes$conda$python$haskell$julia$line_break$directory$git_branch$git_commit$git_state$line_break$shell($env_var)$character"""
+#*******************************************************************************
+# character
+#*******************************************************************************
+[character]
+success_symbol = "[➜](bold green) "
+error_symbol = "[✗](bold red) "
+#*******************************************************************************
+# environment variables
+#*******************************************************************************
+[env_var]
+default = "default"
+format = "[$env_value]($style) "
+variable = "ENVNAME"
+# style = "bold yellow"
+style = "bold red"
+#*******************************************************************************
+# directory
+#*******************************************************************************
+[directory]
+truncation_length = 20
+# truncation_length=8
+truncate_to_repo = false
+# style="bold cyan"
+#*******************************************************************************
+# Disable the package module, hiding it from the prompt completely
+#*******************************************************************************
+[package]
+disabled = true
+#*******************************************************************************
+# time format
+#*******************************************************************************
+[time]
+disabled = false
+format = "[$time]($style) "
+# format = "🕙[ $time ]($style) "
+# format="$[%Y.%b.%d (%a) %T]"
+time_format = "%a %Y.%b.%d %T"
+# utc_time_offset="-5"
+utc_time_offset = "local"
+#*******************************************************************************
+# hostname and ip address
+#*******************************************************************************
+[hostname]
+ssh_only = false
+# format = "on $hostname "
+# format = "on [$hostname](bold green) "
+format = "[$hostname]($style) "
+trim_at = ".rowhit.me"
+disabled = false
+
+[localip]
+ssh_only = false
+format = "[$localipv4](bold blue) "
+disabled = false
+#*******************************************************************************
+# username
+#*******************************************************************************
+[username]
+# format = "[$user](bold yellow) "
+format = "[$user]($style) "
+disabled = false
+show_always = true
+#*******************************************************************************
+# git formatting
+#*******************************************************************************
+[git_branch]
+symbol = " "
+disabled = false
+format = "[$symbol$branch]($style) "
+
+[git_commit]
+disabled = false
+format = "[$hash$tag]($style) "
+commit_hash_length = 8
+tag_symbol = "🔖 "
+only_detached = false
+
+[git_state]
+disabled = false
+# format = '[\($state( $progress_current of $progress_total)\)]($style) '
+# cherry_pick = "[🍒 PICKING](bold red)"
+#*******************************************************************************
+# jobs
+#*******************************************************************************
+[jobs]
+disabled = false
+#*******************************************************************************
+# kubernetes
+#*******************************************************************************
+[kubernetes]
+# format="on [⛵ $context \($namespace\)](dimmed green) "
+disabled = false
+# [kubernetes.context_aliases]
+# "dev.local.cluster.k8s"="dev"
+#*******************************************************************************
+# memory_usage
+#*******************************************************************************
+[memory_usage]
+disabled = false
+threshold = -1
+# symbol="using "
+# format="$symbol [$ram $swap]($style)"
+format = "[$ram | $swap]($style) "
+style = "bold green"
+#style="bold dimmed green"
+#*******************************************************************************
+# programming | python
+#*******************************************************************************
+[python]
+symbol = "🐍 "
+version_format = "v${raw}"
+# pyenv_version_name=true
+# python_binary="python3"
+#*******************************************************************************
+# programming | julia
+#*******************************************************************************
+[julia]
+disabled = false
+symbol = "ஃ "
+version_format = "v${raw}"
+format = "[$symbol($version)]($style) "
+#*******************************************************************************
+# programming | haskell
+#*******************************************************************************
+[haskell]
+symbol = " "
+version_format = "v${raw}"
+#*******************************************************************************
+# differentiate sudo
+#*******************************************************************************
+[sudo]
+style = "bold red"
+symbol = "💻"
+disabled = false
+#*******************************************************************************
+# shell | conda
+#*******************************************************************************
+[conda]
+symbol = "🅒 "
+format = '[$symbol$environment](dimmed green) '
+disabled = false
+#*******************************************************************************
+# shell
+#*******************************************************************************
+[shell]
+# bash_indicator= '🚀 bash'
+# fish_indicator = ' 🐠 fish'
+# nu_indicator= ' 🦀 nushell'
+bash_indicator = 'bash'
+fish_indicator = 'fish'
+nu_indicator = 'nu'
+xonsh_indicator = 'xonsh'
+ion_indicator = 'ion'
+tcsh_indicator = 'tcsh'
+powershell_indicator = '_'
+unknown_indicator = 'unknown'
+# style = 'cyan bold'
+style = 'purple bold'
+disabled = false
+#*******************************************************************************
+# nix shell
+#*******************************************************************************
+[nix_shell]
+disabled = false
+symbol = "❄️ "
+impure_msg = "impure"
+pure_msg = "pure"
+# format='via [☃️ $state( \($name\))](bold blue) '
+#*******************************************************************************
+# command timeout
+#*******************************************************************************
+# [command_timeout]
+# disable=true
+#*******************************************************************************
+# operating system
+#*******************************************************************************
+[os]
+format = "[($name-$version) ]($style)"
+disabled = false
+
+################################################################################
