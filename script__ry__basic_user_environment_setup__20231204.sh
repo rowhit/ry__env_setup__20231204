@@ -23,13 +23,13 @@ sudo apt install ./zoxide_0.9.2_amd64.deb
 
 download_url="https://raw.githubusercontent.com/rowhit/ry__env_setup__20231204/main"
 # configure bashrc
-wget -P ~/.bashrc ${download_url}/bashrc
+wget -O ~/.bashrc ${download_url}/bashrc
 
 # configure tmux
-wget -P ~/.tmux.conf ${download_url}/tmux.conf
+wget -O ~/.tmux.conf ${download_url}/tmux.conf
 
 # configure starship
 mkdir -p ~/.config
-wget -P ~/.config/starship.toml ${download_url}/starship.toml
+wget -O ~/.config/starship.toml ${download_url}/starship.toml
 
 # ##############################################################################
