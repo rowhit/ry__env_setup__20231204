@@ -28,7 +28,7 @@ mkdir -p /root/scratch && cd /root/scratch
 
 # **** install starship
 # curl -sS https://starship.rs/install.sh | sh
-wget https://github.com/starship/starship/releases/download/v${starhip_version}/starship-x86_64-unknown-linux-gnu.tar.gz
+wget https://github.com/starship/starship/releases/download/v${starship_version}/starship-x86_64-unknown-linux-gnu.tar.gz
 tar xvzf ./starship-x86_64-unknown-linux-gnu.tar.gz
 chmod +x ./starship
 mv ./starship /usr/local/bin/.
