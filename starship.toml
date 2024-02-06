@@ -53,7 +53,7 @@ ssh_only = false
 # format = "on $hostname "
 # format = "on [$hostname](bold green) "
 format = "[$hostname]($style) "
-trim_at = ".rowhit.me"
+trim_at = ""
 disabled = false
 
 [localip]
