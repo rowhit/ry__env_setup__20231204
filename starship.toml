@@ -51,8 +51,8 @@ utc_time_offset = "local"
 [hostname]
 ssh_only = false
 # format = "on $hostname "
-# format = "on [$hostname](bold green) "
-format = "[$hostname]($style) "
+format = "on [$hostname](bold yellow) "
+# format = "[$hostname]($style) "
 trim_at = ""
 disabled = false
 
