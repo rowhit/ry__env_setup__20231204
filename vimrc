@@ -37,6 +37,9 @@ Plug 'godlygeek/tabular'
 " markup languages
 Plug 'plasticboy/vim-markdown', { 'for': 'markdown' }
 
+" vim-commentary
+Plug 'tpope/vim-commentary'
+
 call plug#end()
 
 
