@@ -236,5 +236,6 @@ disabled = false
 command = "ip -6 addr show wg-f544 | awk '/inet/ {print $2}' | cut -d'/' -f1"                                                                                             
 when = "true"                                                                                                                                                             
 description = "Displays the IP address of wg-f544"        
+style = "bold white"
 
 # ##############################################################################
