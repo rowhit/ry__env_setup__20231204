@@ -6,7 +6,7 @@
 add_newline = false
 # format = """$username$hostname$os$localip$time$memory_usage$jobs$custom$env_var$kubernetes$conda$python$haskell$julia$line_break$directory$git_branch$git_commit$git_state$line_break$shell$character"""
 # format = """$username$hostname$os$localip$time$memory_usage$jobs$custom$kubernetes$conda$python$haskell$julia$line_break$directory$git_branch$git_commit$git_state$line_break$shell($env_var)$character"""
-format = """$username$hostname$os${custom.ip_wg_f544}$time$memory_usage$jobs$kubernetes$conda$python$haskell$julia$line_break$directory$git_branch$git_commit$git_state$line_break$shell($env_var)$character"""
+format = """$username$hostname$os$localip${custom.ip_wg_f544}$time$memory_usage$jobs$kubernetes$conda$python$haskell$julia$line_break$directory$git_branch$git_commit$git_state$line_break$shell($env_var)$character"""
 
 
 # ******************************************************************************
