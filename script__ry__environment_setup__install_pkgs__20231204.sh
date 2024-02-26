@@ -21,7 +21,7 @@ download_url="https://raw.githubusercontent.com/rowhit/ry__env_setup__20231204/m
 # *** install packages
 # ==============================================================================
 # **** apt packages
-apt install -y wget curl vim python3 fzf ripgrep tmux zip
+apt update -y && apt install -y wget curl vim python3 fzf ripgrep tmux zip unzip
 
 # **** create scratch dir and cd into it
 mkdir -p /root/scratch && cd /root/scratch
