@@ -1,5 +1,5 @@
 #!/usr/bin/env sh
-# file: script__ry__basic_user_environment_setup__root__20231204.sh
+# file: script__ry__environment_setup__install_pkgs__20231204.sh
 # ##############################################################################
 # ** notes
 # ******************************************************************************
@@ -21,7 +21,7 @@ download_url="https://raw.githubusercontent.com/rowhit/ry__env_setup__20231204/m
 # *** install packages
 # ==============================================================================
 # **** apt packages
-apt install -y wget curl vim python3 fzf ripgrep tmux
+apt install -y wget curl vim python3 fzf ripgrep tmux zip
 
 # **** create scratch dir and cd into it
 mkdir -p /root/scratch && cd /root/scratch
@@ -36,26 +36,6 @@ mv ./starship /usr/local/bin/.
 # **** install zoxide
 wget https://github.com/ajeetdsouza/zoxide/releases/download/v${zoxide_version}/zoxide_${zoxide_version}_amd64.deb
 apt install ./zoxide_${zoxide_version}_amd64.deb
-
-
-# ==============================================================================
-# *** configure applications
-# ==============================================================================
-# *** configure bashrc
-wget -O ~/.bashrc ${download_url}/bashrc
-
-# *** configure tmux
-wget -O ~/.tmux.conf ${download_url}/tmux.conf
-
-# *** configure starship
-mkdir -p ~/.config
-wget -O ~/.config/starship.toml ${download_url}/starship.toml
-
-# *** configure starship
-curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
-    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-
-wget -O ~/.vimrc ${download_url}/vimrc
 
 
 # ##############################################################################
